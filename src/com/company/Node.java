@@ -20,6 +20,7 @@ public class Node {
      */
     public boolean isCycled() {
         Node cur = this;
+        // iterating every element
         while (cur != null) {
             Node prev = cur;
             cur = cur.getNext();
