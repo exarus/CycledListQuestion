@@ -10,6 +10,14 @@ public class Node {
     private Node next;
 
 
+    /**
+     * Checks, if the node is a part of cycled linked structure.
+     * In other words, checks if the node can be returned after
+     * iterating throw the list via some amount of getNext() methods.
+     *
+     * @return true if the node is a part of cycled linked structure,
+     * false in the other case.
+     */
     public boolean isCycled() {
         Node cur = this;
         while (cur != null) {
@@ -29,6 +37,9 @@ public class Node {
         return false;
     }
 
+    /**
+     * Standart Constructor.
+     */
     Node() {
         id = nextId;
         nextId++;
@@ -53,15 +64,31 @@ public class Node {
         return result;
     }
 
+    /**
+     * Sets the next node.
+     *
+     * @param next node, to be next in the list.
+     * @return param next.
+     */
     public Node setNext(Node next) {
         this.next = next;
         return next;
     }
 
+    /**
+     * Returns the next node of the list.
+     *
+     * @return the next node of the list.
+     */
     public Node getNext() {
         return next;
     }
 
+    /**
+     * Returns the node's id.
+     *
+     * @return the node's id.
+     */
     public long getId() {
         return id;
     }
